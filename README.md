@@ -1,4 +1,4 @@
-Este programa importa, procesa y concatena52 tablas de datos semanales con formato no tabular, para transformarlas en un formato estructurado que puede ser utilizado para análisis. El procesamiento incluye la adición de nuevas columnas, renombrado de columnas específicas y la organización de los datos por semana y fecha. Finalmente, las tablas procesadas se concatenan y se exportan para su posterior uso.
+Este programa importa, procesa y concatena 52 excels con formato no tabular, para transformarlos en un formato estructurado que puede ser utilizado para análisis. El procesamiento incluye la eliminación de filas y columnas para darle formato tabular a cada excel, la adición de nuevas columnas, renombrado de columnas específicas y la organización de los datos por semana y fecha. Finalmente, las tablas procesadas se concatenan y se exportan para su posterior uso.
 
 Descripción del Proyecto
 El proyecto importa 52 tablas de datos, que no tienen un formato tabular consistente. A continuación, se realiza el siguiente procesamiento en cada DataFrame:
@@ -10,6 +10,7 @@ El proyecto importa 52 tablas de datos, que no tienen un formato tabular consist
   
 Estructura del Código
 - Importación de Tablas: Las tablas son importadas con un formato no tabular y se renombrarán para tener nombres de columnas más representativos.
+- Eliminación de filas y columnas vacías o no necesarias para darle formato tabular correcto a cada dataframe
 - Renombrado de Columnas: Se utiliza un diccionario para renombrar las columnas de cada DataFrame. Las columnas como Unnamed: 1, Unnamed: 4, Unnamed: 6, etc., se cambian a nombres más descriptivos como product, ly_applicants, ly_admitted, ly_registered, entre otros.
 - Añadir la Columna "Region": Una nueva columna llamada region es añadida a cada DataFrame con valores como nacional, internacional y global, dependiendo de la fila.
 - Crear Columnas de "Semana" y "Fecha": Extraemos la información de la semana y la fecha a partir del nombre de los archivos y los asignamos como nuevas columnas a cada DataFrame.
